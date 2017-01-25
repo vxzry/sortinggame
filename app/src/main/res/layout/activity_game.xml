@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "16dp"
+    tools:context="com.avgolosinda.bsit.sortinggame.GameActivity"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Score: 0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtScore"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="monospace"
+            android:typeface="monospace"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="viewStart" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Life: 0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLives"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="monospace"
+            android:typeface="monospace"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.24" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort the numbers in ascending order by tapping the corresponding arrow"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.17" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:id="@+id/txtUp"
+        android:textAlignment="center"
+        android:fontFamily="serif-monospace"
+        android:typeface="monospace"
+        android:textSize="36sp"
+        android:textColor="@color/colorAccent"
+        android:text="0"
+        android:textStyle="bold" />
+
+    <ImageButton
+        app:srcCompat="@drawable/btn_up"
+        android:id="@+id/btnUp"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:onClick="btnClick"
+        android:src="@drawable/btn_up_selector"/>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_weight="0.09"
+        android:layout_height="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:id="@+id/txtLeft"
+            android:text="20"
+            android:gravity="center_vertical"
+            android:fontFamily="serif-monospace"
+            android:typeface="monospace"
+            android:textSize="36sp"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="0.51"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <ImageButton
+            app:srcCompat="@drawable/btn_left"
+            android:id="@+id/btnLeft"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:scaleType="fitCenter"
+            android:layout_width="50dp"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:onClick="btnClick"
+            android:src="@drawable/btn_left_selector"
+            android:layout_height="60dp" />
+
+
+        <Space
+            android:layout_height="wrap_content"
+            android:layout_width="90sp" />
+
+        <ImageButton
+            app:srcCompat="@drawable/btn_right"
+            android:id="@+id/btnRight"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:scaleType="fitCenter"
+            android:layout_width="50dp"
+            android:background="@android:color/transparent"
+            android:onClick="btnClick"
+            android:adjustViewBounds="false"
+            android:src="@drawable/btn_right_selector"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:layout_height="60dp"
+            android:id="@+id/txtRight"
+            android:text="20"
+            android:fontFamily="serif-monospace"
+            android:typeface="monospace"
+            android:textSize="36sp"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="0.57"
+            android:layout_width="30dp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_weight="0.11"
+        android:layout_height="5dp" />
+
+    <ImageButton
+        app:srcCompat="@drawable/btn_down"
+        android:id="@+id/btnDown"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:onClick="btnClick"
+        android:src="@drawable/btn_down_selector"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/txtDown"
+        android:text="0"
+        android:textAlignment="center"
+        android:fontFamily="serif-monospace"
+        android:typeface="monospace"
+        android:textSize="36sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.23" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        app:srcCompat="@drawable/btn_end_game"
+        android:id="@+id/btnEndGame"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:onClick="btnEndGame_click"
+        android:src="@drawable/btn_end_game_selector"
+        />
+
+
+</LinearLayout>

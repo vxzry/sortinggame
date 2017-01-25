@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:padding="16sp"
+    android:background="@color/colorPrimary">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.22" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08" />
+
+    <TextView
+        android:text="Enter your name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:textAlignment="center"
+        android:id="@+id/textView"
+        android:fontFamily="monospace"
+        android:textSize="14sp"
+        android:textColor="@android:color/background_light" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtName"
+        android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:typeface="monospace"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        android:layout_weight="0.06"
+        android:singleLine="true"
+        android:selectAllOnFocus="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        app:srcCompat="@drawable/btn_start"
+        android:id="@+id/btnStart"
+        android:layout_weight="0.15"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:onClick="btnStart_click"
+        android:src="@drawable/btn_start_selector"/>
+</LinearLayout>
